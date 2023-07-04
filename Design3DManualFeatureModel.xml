@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendposition" value="-44,259"/>
+		<graphics key="legendautolayout" value="false"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="vertical"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="6"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="Design 3D cover now">
+			<feature mandatory="true" name="Presentation/main page"/>
+			<and abstract="true" mandatory="true" name="Design 3D cover environment">
+				<and abstract="true" mandatory="true" name="Design 3D cover">
+					<and mandatory="true" name="Desing board">
+						<and name="Zooming">
+							<and name="Zoom menu">
+								<feature name="Choose zoom point"/>
+								<feature name="Choose zoom value"/>
+								<feature name="Zoom reset"/>
+							</and>
+						</and>
+						<feature name="Mapped parts bordering"/>
+					</and>
+					<and mandatory="true" name="Design item">
+						<and abstract="true" mandatory="true" name="Type">
+							<feature name="Circle"/>
+							<feature name="Polygon"/>
+							<feature name="Square"/>
+							<and name="Image">
+								<feature name="Vector"/>
+								<feature name="Raster"/>
+							</and>
+							<feature name="Triangle"/>
+							<feature name="Text"/>
+						</and>
+						<feature mandatory="true" name="Moveable on design board"/>
+						<and mandatory="true" name="Controlls">
+							<feature name="Scale"/>
+							<feature name="Bevel"/>
+							<feature name="Rotate"/>
+							<feature name="Bring to front"/>
+							<feature name="Bring to back"/>
+							<feature name="Delete"/>
+							<feature name="Show position on 3D preview"/>
+							<feature name="Clone"/>
+						</and>
+						<feature mandatory="true" name="Select multiple items"/>
+					</and>
+					<and mandatory="true" name="3D design preview">
+						<feature name="3D rotation"/>
+						<feature name="3D translation"/>
+						<feature name="3D scalling"/>
+						<and name="3D zooming">
+							<and name="3D zoom menu">
+								<feature name="3D zoom reset"/>
+								<feature name="Choose 3D zoom point"/>
+								<feature name="Choose 3D zoom value"/>
+							</and>
+						</and>
+					</and>
+					<and mandatory="true" name="Design summary">
+						<feature mandatory="true" name="Objects parameters list"/>
+						<feature mandatory="true" name="3D screenshoot"/>
+						<feature name="2D screenshoot"/>
+					</and>
+					<feature name="Design 3D navigation"/>
+					<feature mandatory="true" name="DesignTo3DMapper"/>
+				</and>
+				<feature name="Model loader"/>
+				<feature name="Texture finder"/>
+				<feature name="Image loader"/>
+				<feature name="Image gallery"/>
+				<feature name="Own design gallery"/>
+			</and>
+			<feature name="Main navigation"/>
+			<feature name="Published designs"/>
+		</and>
+	</struct>
+</featureModel>

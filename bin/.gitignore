@@ -1,0 +1,13 @@
+/parser/
+/javascriptObjectRepresentations/
+/functionalityNodes/
+/graphConstruction/
+/jackdawParsing/
+/scoringEvaluation/
+/scoringEval/
+/webSimilarity/
+/semanticAttributesAggregation/
+/graphSimilarities/
+/analysisAPI/
+/LDAGibbs/
+/linkSimilarity/
