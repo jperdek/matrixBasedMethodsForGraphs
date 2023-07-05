@@ -45,8 +45,8 @@ Launching the application:
 ![whole application as graph](./documentation/helpers/overviewOfPuzzleToPlayApplication.png)
 
 ### Observe similarities between given components (only one of applications is required: Puzzle to Play is default)
-- launching FeatureParser.java in parser package  
-![Integration](./documentation/semanticEvaluationFlowExtendedVertical.png)
+- launching FeatureParser.java in parser package and output should look like this: 
+![Integration](./documentation/similarities.png)
 
 ### Whole schema
 ![Whole schema of integrated approach](./documentation/semanticEvaluationFlowExtendedVertical.png)
