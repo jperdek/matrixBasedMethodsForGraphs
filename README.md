@@ -148,8 +148,11 @@ matching. Applied Mathematics Letters [online]. 2008, roč. 21, č. 1, s. 86–9
 	file = {Zager a Verghese - 2008 - Graph similarity scoring and matching.pdf:C\:\\Users\\perde\\Zotero\\storage\\Y247CJA8\\Zager a Verghese - 2008 - Graph similarity scoring and matching.pdf:application/pdf},
 }
 
-All diagrams, code and tests are mine.
+
 ### Hungarian method
 
 Taken from:  
 https://github.com/KevinStern/software-and-algorithms/blob/master/src/main/java/blogspot/software_and_algorithms/stern_library/optimization/HungarianAlgorithm.java
+
+
+All diagrams, code and tests are mine.
