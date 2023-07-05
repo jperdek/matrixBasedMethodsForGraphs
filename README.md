@@ -24,10 +24,29 @@ JAVASCRIPT OBJECT REPRESENTATION HANDLING OBJECTS - Folder: javascriptObjectRepr
 
 Launching the application: 
 - loading external jars from lib folder  
-- setting path to Angular project (works with Puzzle To Play application)  
-- launching neo4j db and setting your login and password  
+- setting paths to Angular projects (works with Puzzle To Play application) and DB setting in MainConfiguration.java in main package:
+  ![Integration](./documentation/helpers/configuration.png)
+- install and launch neo4j db (tip for Windows: "E:\neo4j\bin\neo4j.bat" console) and open GUI (http://localhost:7474/browser/)
+  ![Integration](./documentation/helpers/neo4jConsole.png)
+
+### Lauch whole process
+- 1. launching FeatureDataInsertion.java in graphConstruction package:   
+  ![both apps insertion](./documentation/helpers/parseBothApplications.png)
+	- result should be following:  
+  	![both app insertion](./documentation/helpers/insertingBothApplications.png)
+- 2. launching GraphsClustering.java in graphConstruction package:  
+  ![clustering of apps](./documentation/helpers/integratedMethod.png)
+     	- one of clustered results should be following:  
+  	![both app insertion](./documentation/helpers/oneOfClusteredResult.png)
+- 3. analyze merged values and relations:  
+  ![one of resulting view](./documentation/helpers/mergedAndClusteredResultView.png) 
+
+![whole application as graph](./documentation/helpers/overviewOfPuzzleToPlayApplication.png)
+
+### Observe similarities between given components
 - launching FeatureParser.java in parser package  
-  
+
+### Whole schema
 ![Integration](./documentation/semanticEvaluationFlowExtendedVertical.png)
 
 
