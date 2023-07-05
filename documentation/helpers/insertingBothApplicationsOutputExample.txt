@@ -1,0 +1,118 @@
+-->Module: Root module
+ |->Component: Main Navigation 
+ |->Component: Small Main Menu 
+ |->Component: Aspect Test 
+ -->Module: MaterialModule
+ |->Component: Aspect Test Node2 
+ -->Module: PuzzleBuilderModule
+  |->Component: Gallery Bottom Sheet 
+    |__>Used in template<__
+    |__app-gallery 1
+  |->Component: Template Preview Bottom Sheet 
+    |__>Used in template<__
+    |__app-template-preview 1
+  |->Component: Zoom Management 
+    |__>Used services<__
+    |__Zoom Manager  1
+    |__Puzzle Manager  5
+  |->Component: Puzzle Board 
+    |__>Used in template<__
+    |__app-zoom-menu 1
+    |__>Used services<__
+    |__Puzzle Manager  1
+  |->Component: Insert Template Image Bottom Sheet 
+  |->Component: Puzzle Builder 
+    |__>Used in template<__
+    |__app-puzzle-board 1
+  -->Module: MaterialModule
+  |->Component: Zoom Management Bottom Sheet 
+    |__>Used in template<__
+    |__app-zoom-management 1
+  |->Component: Drag And Drop Image 
+    |__>Used services<__
+    |__Puzzle Manager  1
+  |->Component: Zoom Menu 
+    |__>Used services<__
+    |__Zoom Manager  1
+    |__Puzzle Manager  3
+  |->Component: Puzzle Chooser 
+    |__>Used services<__
+    |__Puzzle Manager  1
+    |__Shuffle Puzzles  1
+  |->Component: Template Preview 
+    |__>Used services<__
+    |__Puzzle Manager  1
+  |->Component: Gallery 
+    |__>Used services<__
+    |__Puzzle Manager  1
+  |->Component: Puzzle Chooser Bottom Sheet 
+    |__>Used in template<__
+    |__app-puzzle-chooser 1
+ |->Component: To Aop Test 
+ |->Component: Initial Page 
+   |__>Used services<__
+   |__Bar 1
+   |__To Aop Test  3
+   |__Aspectjs Manager  1
+   |__Puzzle Manager  1
+ |->Component: Aspect Test Node 
+Unknown declaration type! Example: E:/aspects/design3D/design3D/src/app/pipes/three-name-formatting.pipe
+-->Module: Root module
+ -->Module: DesignMakerModule
+  |->Component: Gallery Bottom Sheet 
+  |->Component: Lightning Management 
+    |__>Used services<__
+    |__Lightning Manager  1
+  |->Component: Point Light Configuration 
+    |__>Used services<__
+    |__Lightning Manager  1
+  |->Component: Lightning Configuration 
+    |__>Used in template<__
+    |__app-rect-area-light-configuration 2
+    |__app-directional-light-configuration 2
+    |__app-ambient-light-configuration 2
+    |__app-point-light-configuration 2
+    |__app-hemispheral-light-configuration 2
+    |__app-spot-light-configuration 2
+    |__>Used services<__
+    |__Lightning Manager  4
+  |->Component: Hemispheral Light Configuration 
+    |__>Used services<__
+    |__Lightning Manager  1
+  -->Module: MaterialModule
+  |->Component: Rect Area Light Configuration 
+    |__>Used services<__
+    |__Lightning Manager  1
+  |->Component: Zoom Management Bottom Sheet 
+  |->Component: Spot Light Configuration 
+    |__>Used services<__
+    |__Lightning Manager  1
+  |->Component: Directional Light Configuration 
+    |__>Used services<__
+    |__Lightning Manager  1
+  |->Component: Ambient Light Configuration 
+    |__>Used services<__
+    |__Lightning Manager  1
+  |->Component: Export Management 
+    |__>Used services<__
+    |__Model Exporter  1
+    |__Preview Board Manager  1
+  |->Component: Design Maker 
+    |__>Used in template<__
+    |__app-design-preview 1
+  |->Component: Design Preview 
+    |__>Used in template<__
+    |__app-lightning-management 1
+    |__app-export-management 1
+    |__app-camera-management 1
+    |__>Used services<__
+    |__Preview Board Manager  1
+    |__Lightning Manager  1
+  |->Component: Camera Management 
+    |__>Used services<__
+    |__Camera Manager  12
+ |->Component: Main Navigation 
+ -->Module: DirectivesModule
+ |->Component: Small Main Menu 
+ |->Component: Initial Page 
+ -->Module: MaterialModule

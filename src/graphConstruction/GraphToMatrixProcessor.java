@@ -11,7 +11,7 @@ import org.neo4j.driver.Session;
 //import graphConstruction.scoringEvaluation.PageRank;
 import linkSimilarity.adjacencyMatrixProcessing.AdjacencyMatrixProcessor;
 import main.MainConfiguration;
-import semanticAttributesAggregation.JackardSimilarity;
+import semanticAttributesAggregation.JaccardSimilarity;
 import semanticAttributesAggregation.SemanticMetricsManager;
 import static org.neo4j.driver.Values.parameters;
 import org.neo4j.driver.Record;
@@ -39,11 +39,11 @@ public class GraphToMatrixProcessor extends GraphCreator {
 		//p.calc(hyperlinkMatrix.getSize());
 		SemanticMetricsManager semanticMetricsManager = new SemanticMetricsManager();
 		Map<String, Double> classMetricsValuesMap = graphToMatrixProcessor.getMetricValuesFromRelation("classSimilarity", adjacency.getMatrixNames());
-		JackardSimilarity classSimilarity = new JackardSimilarity("classSimilarity", 0.5, classMetricsValuesMap);
+		JaccardSimilarity classSimilarity = new JaccardSimilarity("classSimilarity", 0.5, classMetricsValuesMap);
 		semanticMetricsManager.addMetric(classSimilarity);
 
 		Map<String, Double> attributesMetricsValuesMap = graphToMatrixProcessor.getMetricValuesFromRelation("attributesSimilarity", adjacency.getMatrixNames());
-		JackardSimilarity attributesSimilarity = new JackardSimilarity("attributesSimilarity", 0.85, attributesMetricsValuesMap);
+		JaccardSimilarity attributesSimilarity = new JaccardSimilarity("attributesSimilarity", 0.85, attributesMetricsValuesMap);
 		semanticMetricsManager.addMetric(attributesSimilarity);
 
 		clusterAdjacencyMatrixSemanticAnalysis(adjacency, semanticMetricsManager);
@@ -56,11 +56,11 @@ public class GraphToMatrixProcessor extends GraphCreator {
 
 		SemanticMetricsManager semanticMetricsManager = new SemanticMetricsManager();
 		Map<String, Double> classMetricsValuesMap = graphToMatrixProcessor.getMetricValuesFromRelation("classSimilarity", adjacency.getMatrixNames(), tag);
-		JackardSimilarity classSimilarity = new JackardSimilarity("classSimilarity", 0.5, classMetricsValuesMap);
+		JaccardSimilarity classSimilarity = new JaccardSimilarity("classSimilarity", 0.5, classMetricsValuesMap);
 		semanticMetricsManager.addMetric(classSimilarity);
 
 		Map<String, Double> attributesMetricsValuesMap = graphToMatrixProcessor.getMetricValuesFromRelation("attributesSimilarity", adjacency.getMatrixNames(), tag);
-		JackardSimilarity attributesSimilarity = new JackardSimilarity("attributesSimilarity", 0.85, attributesMetricsValuesMap);
+		JaccardSimilarity attributesSimilarity = new JaccardSimilarity("attributesSimilarity", 0.85, attributesMetricsValuesMap);
 		semanticMetricsManager.addMetric(attributesSimilarity);
 
 		clusterAdjacencyMatrixSemanticAnalysis(adjacency, semanticMetricsManager);

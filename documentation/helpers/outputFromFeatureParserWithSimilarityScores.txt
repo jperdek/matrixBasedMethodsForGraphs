@@ -1,0 +1,278 @@
+-->Module: Root module
+ |->Component: Main Navigation 
+ |->Component: Small Main Menu 
+ |->Component: Aspect Test 
+ -->Module: MaterialModule
+ |->Component: Aspect Test Node2 
+ -->Module: PuzzleBuilderModule
+  |->Component: Gallery Bottom Sheet 
+    |__>Used in template<__
+    |__app-gallery 1
+  |->Component: Template Preview Bottom Sheet 
+    |__>Used in template<__
+    |__app-template-preview 1
+  |->Component: Zoom Management 
+    |__>Used services<__
+    |__Zoom Manager  1
+    |__Puzzle Manager  5
+  |->Component: Puzzle Board 
+    |__>Used in template<__
+    |__app-zoom-menu 1
+    |__>Used services<__
+    |__Puzzle Manager  1
+  |->Component: Insert Template Image Bottom Sheet 
+  |->Component: Puzzle Builder 
+    |__>Used in template<__
+    |__app-puzzle-board 1
+  -->Module: MaterialModule
+  |->Component: Zoom Management Bottom Sheet 
+    |__>Used in template<__
+    |__app-zoom-management 1
+  |->Component: Drag And Drop Image 
+    |__>Used services<__
+    |__Puzzle Manager  1
+  |->Component: Zoom Menu 
+    |__>Used services<__
+    |__Zoom Manager  1
+    |__Puzzle Manager  3
+  |->Component: Puzzle Chooser 
+    |__>Used services<__
+    |__Puzzle Manager  1
+    |__Shuffle Puzzles  1
+  |->Component: Template Preview 
+    |__>Used services<__
+    |__Puzzle Manager  1
+  |->Component: Gallery 
+    |__>Used services<__
+    |__Puzzle Manager  1
+  |->Component: Puzzle Chooser Bottom Sheet 
+    |__>Used in template<__
+    |__app-puzzle-chooser 1
+ |->Component: To Aop Test 
+ |->Component: Initial Page 
+   |__>Used services<__
+   |__Bar 1
+   |__To Aop Test  3
+   |__Aspectjs Manager  1
+   |__Puzzle Manager  1
+ |->Component: Aspect Test Node 
+MainNavigationComponent|&&&|ZoomManagementComponent: 0.03333333333333333
+ZoomManagementComponent|&&&|MainNavigationComponent: 0.03333333333333333
+ZoomManagementComponent|&&&|ZoomMenuComponent: 0.08333333333333333
+ZoomManagementComponent|&&&|PuzzleChooserComponent: 0.034482758620689655
+ZoomManagementComponent|&&&|TemplatePreviewComponent: 0.041666666666666664
+ZoomManagementComponent|&&&|GalleryComponent: 0.03125
+ZoomManagementComponent|&&&|InitialPageComponent: 0.02857142857142857
+ZoomMenuComponent|&&&|ZoomManagementComponent: 0.08333333333333333
+PuzzleChooserComponent|&&&|ZoomManagementComponent: 0.034482758620689655
+PuzzleChooserComponent|&&&|TemplatePreviewComponent: 0.08333333333333333
+PuzzleChooserComponent|&&&|GalleryComponent: 0.05
+PuzzleChooserComponent|&&&|InitialPageComponent: 0.043478260869565216
+TemplatePreviewComponent|&&&|ZoomManagementComponent: 0.041666666666666664
+TemplatePreviewComponent|&&&|PuzzleChooserComponent: 0.08333333333333333
+TemplatePreviewComponent|&&&|GalleryComponent: 0.06666666666666667
+TemplatePreviewComponent|&&&|InitialPageComponent: 0.05555555555555555
+GalleryComponent|&&&|ZoomManagementComponent: 0.03125
+GalleryComponent|&&&|PuzzleChooserComponent: 0.05
+GalleryComponent|&&&|TemplatePreviewComponent: 0.06666666666666667
+GalleryComponent|&&&|InitialPageComponent: 0.038461538461538464
+InitialPageComponent|&&&|ZoomManagementComponent: 0.02857142857142857
+InitialPageComponent|&&&|PuzzleChooserComponent: 0.043478260869565216
+InitialPageComponent|&&&|TemplatePreviewComponent: 0.05555555555555555
+InitialPageComponent|&&&|GalleryComponent: 0.038461538461538464
+MainNavigationComponent|&&&|SmallMainMenuComponent: 0.16666666666666666
+MainNavigationComponent|&&&|GalleryBottomSheetComponent: 0.06666666666666667
+MainNavigationComponent|&&&|TemplatePreviewBottomSheetComponent: 0.06666666666666667
+MainNavigationComponent|&&&|ZoomManagementComponent: 0.19230769230769232
+MainNavigationComponent|&&&|PuzzleBoardComponent: 0.1111111111111111
+MainNavigationComponent|&&&|InsertTemplateImageBottomSheetComponent: 0.06666666666666667
+MainNavigationComponent|&&&|PuzzleBuilderComponent: 0.10526315789473684
+MainNavigationComponent|&&&|ZoomManagementBottomSheetComponent: 0.06666666666666667
+MainNavigationComponent|&&&|DragAndDropImageComponent: 0.08695652173913043
+MainNavigationComponent|&&&|ZoomMenuComponent: 0.16666666666666666
+MainNavigationComponent|&&&|PuzzleChooserComponent: 0.09523809523809523
+MainNavigationComponent|&&&|TemplatePreviewComponent: 0.058823529411764705
+MainNavigationComponent|&&&|GalleryComponent: 0.14285714285714285
+MainNavigationComponent|&&&|InitialPageComponent: 0.09090909090909091
+SmallMainMenuComponent|&&&|MainNavigationComponent: 0.16666666666666666
+SmallMainMenuComponent|&&&|GalleryBottomSheetComponent: 0.16666666666666666
+SmallMainMenuComponent|&&&|TemplatePreviewBottomSheetComponent: 0.16666666666666666
+SmallMainMenuComponent|&&&|ZoomManagementComponent: 0.375
+SmallMainMenuComponent|&&&|PuzzleBoardComponent: 0.2222222222222222
+SmallMainMenuComponent|&&&|InsertTemplateImageBottomSheetComponent: 0.16666666666666666
+SmallMainMenuComponent|&&&|PuzzleBuilderComponent: 0.09090909090909091
+SmallMainMenuComponent|&&&|ZoomManagementBottomSheetComponent: 0.16666666666666666
+SmallMainMenuComponent|&&&|DragAndDropImageComponent: 0.23076923076923078
+SmallMainMenuComponent|&&&|PuzzleChooserComponent: 0.4
+SmallMainMenuComponent|&&&|TemplatePreviewComponent: 0.2857142857142857
+SmallMainMenuComponent|&&&|GalleryComponent: 0.25
+SmallMainMenuComponent|&&&|InitialPageComponent: 0.08
+GalleryBottomSheetComponent|&&&|MainNavigationComponent: 0.06666666666666667
+GalleryBottomSheetComponent|&&&|SmallMainMenuComponent: 0.16666666666666666
+GalleryBottomSheetComponent|&&&|ZoomManagementComponent: 0.0625
+GalleryBottomSheetComponent|&&&|PuzzleBoardComponent: 0.2
+GalleryBottomSheetComponent|&&&|PuzzleBuilderComponent: 0.16666666666666666
+GalleryBottomSheetComponent|&&&|DragAndDropImageComponent: 0.1
+GalleryBottomSheetComponent|&&&|ZoomMenuComponent: 0.16666666666666666
+GalleryBottomSheetComponent|&&&|PuzzleChooserComponent: 0.125
+GalleryBottomSheetComponent|&&&|TemplatePreviewComponent: 0.3333333333333333
+GalleryBottomSheetComponent|&&&|GalleryComponent: 0.1111111111111111
+GalleryBottomSheetComponent|&&&|InitialPageComponent: 0.047619047619047616
+TemplatePreviewBottomSheetComponent|&&&|MainNavigationComponent: 0.06666666666666667
+TemplatePreviewBottomSheetComponent|&&&|SmallMainMenuComponent: 0.16666666666666666
+TemplatePreviewBottomSheetComponent|&&&|ZoomManagementComponent: 0.0625
+TemplatePreviewBottomSheetComponent|&&&|PuzzleBoardComponent: 0.2
+TemplatePreviewBottomSheetComponent|&&&|PuzzleBuilderComponent: 0.16666666666666666
+TemplatePreviewBottomSheetComponent|&&&|DragAndDropImageComponent: 0.1
+TemplatePreviewBottomSheetComponent|&&&|ZoomMenuComponent: 0.16666666666666666
+TemplatePreviewBottomSheetComponent|&&&|PuzzleChooserComponent: 0.125
+TemplatePreviewBottomSheetComponent|&&&|TemplatePreviewComponent: 0.3333333333333333
+TemplatePreviewBottomSheetComponent|&&&|GalleryComponent: 0.1111111111111111
+TemplatePreviewBottomSheetComponent|&&&|InitialPageComponent: 0.047619047619047616
+ZoomManagementComponent|&&&|MainNavigationComponent: 0.19230769230769232
+ZoomManagementComponent|&&&|SmallMainMenuComponent: 0.375
+ZoomManagementComponent|&&&|GalleryBottomSheetComponent: 0.0625
+ZoomManagementComponent|&&&|TemplatePreviewBottomSheetComponent: 0.0625
+ZoomManagementComponent|&&&|PuzzleBoardComponent: 0.10526315789473684
+ZoomManagementComponent|&&&|InsertTemplateImageBottomSheetComponent: 0.0625
+ZoomManagementComponent|&&&|PuzzleBuilderComponent: 0.047619047619047616
+ZoomManagementComponent|&&&|ZoomManagementBottomSheetComponent: 0.0625
+ZoomManagementComponent|&&&|DragAndDropImageComponent: 0.3
+ZoomManagementComponent|&&&|ZoomMenuComponent: 0.375
+ZoomManagementComponent|&&&|PuzzleChooserComponent: 0.2
+ZoomManagementComponent|&&&|TemplatePreviewComponent: 0.11764705882352941
+ZoomManagementComponent|&&&|GalleryComponent: 0.13636363636363635
+ZoomManagementComponent|&&&|InitialPageComponent: 0.05714285714285714
+PuzzleBoardComponent|&&&|MainNavigationComponent: 0.1111111111111111
+PuzzleBoardComponent|&&&|SmallMainMenuComponent: 0.2222222222222222
+PuzzleBoardComponent|&&&|GalleryBottomSheetComponent: 0.2
+PuzzleBoardComponent|&&&|TemplatePreviewBottomSheetComponent: 0.2
+PuzzleBoardComponent|&&&|ZoomManagementComponent: 0.10526315789473684
+PuzzleBoardComponent|&&&|InsertTemplateImageBottomSheetComponent: 0.2
+PuzzleBoardComponent|&&&|PuzzleBuilderComponent: 0.1
+PuzzleBoardComponent|&&&|ZoomManagementBottomSheetComponent: 0.2
+PuzzleBoardComponent|&&&|DragAndDropImageComponent: 0.15384615384615385
+PuzzleBoardComponent|&&&|ZoomMenuComponent: 0.2222222222222222
+PuzzleBoardComponent|&&&|PuzzleChooserComponent: 0.18181818181818182
+PuzzleBoardComponent|&&&|TemplatePreviewComponent: 0.14285714285714285
+PuzzleBoardComponent|&&&|GalleryComponent: 0.16666666666666666
+PuzzleBoardComponent|&&&|InitialPageComponent: 0.08333333333333333
+InsertTemplateImageBottomSheetComponent|&&&|MainNavigationComponent: 0.06666666666666667
+InsertTemplateImageBottomSheetComponent|&&&|SmallMainMenuComponent: 0.16666666666666666
+InsertTemplateImageBottomSheetComponent|&&&|ZoomManagementComponent: 0.0625
+InsertTemplateImageBottomSheetComponent|&&&|PuzzleBoardComponent: 0.2
+InsertTemplateImageBottomSheetComponent|&&&|PuzzleBuilderComponent: 0.16666666666666666
+InsertTemplateImageBottomSheetComponent|&&&|DragAndDropImageComponent: 0.1
+InsertTemplateImageBottomSheetComponent|&&&|ZoomMenuComponent: 0.16666666666666666
+InsertTemplateImageBottomSheetComponent|&&&|PuzzleChooserComponent: 0.125
+InsertTemplateImageBottomSheetComponent|&&&|TemplatePreviewComponent: 0.3333333333333333
+InsertTemplateImageBottomSheetComponent|&&&|GalleryComponent: 0.1111111111111111
+InsertTemplateImageBottomSheetComponent|&&&|InitialPageComponent: 0.047619047619047616
+PuzzleBuilderComponent|&&&|MainNavigationComponent: 0.10526315789473684
+PuzzleBuilderComponent|&&&|SmallMainMenuComponent: 0.09090909090909091
+PuzzleBuilderComponent|&&&|GalleryBottomSheetComponent: 0.16666666666666666
+PuzzleBuilderComponent|&&&|TemplatePreviewBottomSheetComponent: 0.16666666666666666
+PuzzleBuilderComponent|&&&|ZoomManagementComponent: 0.047619047619047616
+PuzzleBuilderComponent|&&&|PuzzleBoardComponent: 0.1
+PuzzleBuilderComponent|&&&|InsertTemplateImageBottomSheetComponent: 0.16666666666666666
+PuzzleBuilderComponent|&&&|ZoomManagementBottomSheetComponent: 0.16666666666666666
+PuzzleBuilderComponent|&&&|DragAndDropImageComponent: 0.06666666666666667
+PuzzleBuilderComponent|&&&|ZoomMenuComponent: 0.09090909090909091
+PuzzleBuilderComponent|&&&|PuzzleChooserComponent: 0.07692307692307693
+PuzzleBuilderComponent|&&&|TemplatePreviewComponent: 0.125
+PuzzleBuilderComponent|&&&|GalleryComponent: 0.07142857142857142
+PuzzleBuilderComponent|&&&|InitialPageComponent: 0.038461538461538464
+ZoomManagementBottomSheetComponent|&&&|MainNavigationComponent: 0.06666666666666667
+ZoomManagementBottomSheetComponent|&&&|SmallMainMenuComponent: 0.16666666666666666
+ZoomManagementBottomSheetComponent|&&&|ZoomManagementComponent: 0.0625
+ZoomManagementBottomSheetComponent|&&&|PuzzleBoardComponent: 0.2
+ZoomManagementBottomSheetComponent|&&&|PuzzleBuilderComponent: 0.16666666666666666
+ZoomManagementBottomSheetComponent|&&&|DragAndDropImageComponent: 0.1
+ZoomManagementBottomSheetComponent|&&&|ZoomMenuComponent: 0.16666666666666666
+ZoomManagementBottomSheetComponent|&&&|PuzzleChooserComponent: 0.125
+ZoomManagementBottomSheetComponent|&&&|TemplatePreviewComponent: 0.3333333333333333
+ZoomManagementBottomSheetComponent|&&&|GalleryComponent: 0.1111111111111111
+ZoomManagementBottomSheetComponent|&&&|InitialPageComponent: 0.047619047619047616
+DragAndDropImageComponent|&&&|MainNavigationComponent: 0.08695652173913043
+DragAndDropImageComponent|&&&|SmallMainMenuComponent: 0.23076923076923078
+DragAndDropImageComponent|&&&|GalleryBottomSheetComponent: 0.1
+DragAndDropImageComponent|&&&|TemplatePreviewBottomSheetComponent: 0.1
+DragAndDropImageComponent|&&&|ZoomManagementComponent: 0.3
+DragAndDropImageComponent|&&&|PuzzleBoardComponent: 0.15384615384615385
+DragAndDropImageComponent|&&&|InsertTemplateImageBottomSheetComponent: 0.1
+DragAndDropImageComponent|&&&|PuzzleBuilderComponent: 0.06666666666666667
+DragAndDropImageComponent|&&&|ZoomManagementBottomSheetComponent: 0.1
+DragAndDropImageComponent|&&&|ZoomMenuComponent: 0.23076923076923078
+DragAndDropImageComponent|&&&|PuzzleChooserComponent: 0.2
+DragAndDropImageComponent|&&&|TemplatePreviewComponent: 0.18181818181818182
+DragAndDropImageComponent|&&&|GalleryComponent: 0.11764705882352941
+DragAndDropImageComponent|&&&|InitialPageComponent: 0.03333333333333333
+ZoomMenuComponent|&&&|MainNavigationComponent: 0.16666666666666666
+ZoomMenuComponent|&&&|GalleryBottomSheetComponent: 0.16666666666666666
+ZoomMenuComponent|&&&|TemplatePreviewBottomSheetComponent: 0.16666666666666666
+ZoomMenuComponent|&&&|ZoomManagementComponent: 0.375
+ZoomMenuComponent|&&&|PuzzleBoardComponent: 0.2222222222222222
+ZoomMenuComponent|&&&|InsertTemplateImageBottomSheetComponent: 0.16666666666666666
+ZoomMenuComponent|&&&|PuzzleBuilderComponent: 0.09090909090909091
+ZoomMenuComponent|&&&|ZoomManagementBottomSheetComponent: 0.16666666666666666
+ZoomMenuComponent|&&&|DragAndDropImageComponent: 0.23076923076923078
+ZoomMenuComponent|&&&|PuzzleChooserComponent: 0.4
+ZoomMenuComponent|&&&|TemplatePreviewComponent: 0.2857142857142857
+ZoomMenuComponent|&&&|GalleryComponent: 0.25
+ZoomMenuComponent|&&&|InitialPageComponent: 0.08
+PuzzleChooserComponent|&&&|MainNavigationComponent: 0.09523809523809523
+PuzzleChooserComponent|&&&|SmallMainMenuComponent: 0.4
+PuzzleChooserComponent|&&&|GalleryBottomSheetComponent: 0.125
+PuzzleChooserComponent|&&&|TemplatePreviewBottomSheetComponent: 0.125
+PuzzleChooserComponent|&&&|ZoomManagementComponent: 0.2
+PuzzleChooserComponent|&&&|PuzzleBoardComponent: 0.18181818181818182
+PuzzleChooserComponent|&&&|InsertTemplateImageBottomSheetComponent: 0.125
+PuzzleChooserComponent|&&&|PuzzleBuilderComponent: 0.07692307692307693
+PuzzleChooserComponent|&&&|ZoomManagementBottomSheetComponent: 0.125
+PuzzleChooserComponent|&&&|DragAndDropImageComponent: 0.2
+PuzzleChooserComponent|&&&|ZoomMenuComponent: 0.4
+PuzzleChooserComponent|&&&|TemplatePreviewComponent: 0.375
+PuzzleChooserComponent|&&&|GalleryComponent: 0.4166666666666667
+PuzzleChooserComponent|&&&|InitialPageComponent: 0.11538461538461539
+TemplatePreviewComponent|&&&|MainNavigationComponent: 0.058823529411764705
+TemplatePreviewComponent|&&&|SmallMainMenuComponent: 0.2857142857142857
+TemplatePreviewComponent|&&&|GalleryBottomSheetComponent: 0.3333333333333333
+TemplatePreviewComponent|&&&|TemplatePreviewBottomSheetComponent: 0.3333333333333333
+TemplatePreviewComponent|&&&|ZoomManagementComponent: 0.11764705882352941
+TemplatePreviewComponent|&&&|PuzzleBoardComponent: 0.14285714285714285
+TemplatePreviewComponent|&&&|InsertTemplateImageBottomSheetComponent: 0.3333333333333333
+TemplatePreviewComponent|&&&|PuzzleBuilderComponent: 0.125
+TemplatePreviewComponent|&&&|ZoomManagementBottomSheetComponent: 0.3333333333333333
+TemplatePreviewComponent|&&&|DragAndDropImageComponent: 0.18181818181818182
+TemplatePreviewComponent|&&&|ZoomMenuComponent: 0.2857142857142857
+TemplatePreviewComponent|&&&|PuzzleChooserComponent: 0.375
+TemplatePreviewComponent|&&&|GalleryComponent: 0.3333333333333333
+TemplatePreviewComponent|&&&|InitialPageComponent: 0.043478260869565216
+GalleryComponent|&&&|MainNavigationComponent: 0.14285714285714285
+GalleryComponent|&&&|SmallMainMenuComponent: 0.25
+GalleryComponent|&&&|GalleryBottomSheetComponent: 0.1111111111111111
+GalleryComponent|&&&|TemplatePreviewBottomSheetComponent: 0.1111111111111111
+GalleryComponent|&&&|ZoomManagementComponent: 0.13636363636363635
+GalleryComponent|&&&|PuzzleBoardComponent: 0.16666666666666666
+GalleryComponent|&&&|InsertTemplateImageBottomSheetComponent: 0.1111111111111111
+GalleryComponent|&&&|PuzzleBuilderComponent: 0.07142857142857142
+GalleryComponent|&&&|ZoomManagementBottomSheetComponent: 0.1111111111111111
+GalleryComponent|&&&|DragAndDropImageComponent: 0.11764705882352941
+GalleryComponent|&&&|ZoomMenuComponent: 0.25
+GalleryComponent|&&&|PuzzleChooserComponent: 0.4166666666666667
+GalleryComponent|&&&|TemplatePreviewComponent: 0.3333333333333333
+GalleryComponent|&&&|InitialPageComponent: 0.15384615384615385
+InitialPageComponent|&&&|MainNavigationComponent: 0.09090909090909091
+InitialPageComponent|&&&|SmallMainMenuComponent: 0.08
+InitialPageComponent|&&&|GalleryBottomSheetComponent: 0.047619047619047616
+InitialPageComponent|&&&|TemplatePreviewBottomSheetComponent: 0.047619047619047616
+InitialPageComponent|&&&|ZoomManagementComponent: 0.05714285714285714
+InitialPageComponent|&&&|PuzzleBoardComponent: 0.08333333333333333
+InitialPageComponent|&&&|InsertTemplateImageBottomSheetComponent: 0.047619047619047616
+InitialPageComponent|&&&|PuzzleBuilderComponent: 0.038461538461538464
+InitialPageComponent|&&&|ZoomManagementBottomSheetComponent: 0.047619047619047616
+InitialPageComponent|&&&|DragAndDropImageComponent: 0.03333333333333333
+InitialPageComponent|&&&|ZoomMenuComponent: 0.08
+InitialPageComponent|&&&|PuzzleChooserComponent: 0.11538461538461539
+InitialPageComponent|&&&|TemplatePreviewComponent: 0.043478260869565216
+InitialPageComponent|&&&|GalleryComponent: 0.15384615384615385
