@@ -23,9 +23,9 @@ SIMPLE ANGULAR PARSER - Folder: parser, functionalityNodes
 JAVASCRIPT OBJECT REPRESENTATION HANDLING OBJECTS - Folder: javascriptObjectRepresentations
 
 Launching the application: 
-- loading external jars from lib folder  
-- setting paths to Angular projects (works with Puzzle To Play application available in https://github.com/jperdek/puzzleToPlay) and DB setting in MainConfiguration.java in main package:
-  (NOTE: second application is not publicly available, but i can give access to it for testing purposes (parser is simple and may fail if parsing conditions are not met - parsing AST is for future work)- still methods are covered with unit tests) 
+- import external jars from lib folder  
+- set paths to Angular projects (works with Puzzle To Play application available in https://github.com/jperdek/puzzleToPlay) and DB setting in MainConfiguration.java in main package:
+  (NOTE: second application Design 3D is not publicly available, but i can give you access to it for testing purposes (parser is simple and may fail on other applications if parsing conditions are not met - parsing AST is for future work)- still methods are covered with unit tests) 
   ![Integration](./documentation/helpers/configuration.png)
 - install and launch neo4j db (tip for Windows: "E:\neo4j\bin\neo4j.bat" console) and open GUI (http://localhost:7474/browser/)
   ![Integration](./documentation/helpers/neo4jConsole.png)
