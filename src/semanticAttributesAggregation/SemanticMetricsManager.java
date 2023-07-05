@@ -24,7 +24,7 @@ public class SemanticMetricsManager {
 		while(metricIterator.hasNext()) {
 			processedMetrics = metricIterator.next();
 			incrementalValue = incrementalValue + 
-					processedMetrics.getCoefficient() * ((JackardSimilarity) processedMetrics).getSimilarityValueFromMap(nodeIndex1, nodeIndex2);
+					processedMetrics.getCoefficient() * ((JaccardSimilarity) processedMetrics).getSimilarityValueFromMap(nodeIndex1, nodeIndex2);
 		}
 		return incrementalValue;
 	}

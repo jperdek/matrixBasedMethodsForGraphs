@@ -8,14 +8,13 @@ import graphSimilarities.GraphsVertexEdgeSimilaritiesLong;
 import graphSimilarities.GraphsVertexSimilarities;
 import graphSimilarities.GraphsVertexSimilaritiesLong;
 import graphSimilarities.MaximizedHungarianMethodWrapper;
+import linkSimilarity.AdjacencyToWeight;
+import linkSimilarity.CorrelationDegreeMatrix;
+import linkSimilarity.CorrelationToSimilarityMatrix;
+import linkSimilarity.adjacencyMatrixProcessing.AdjacencyMatrixProcessor;
+import linkSimilarity.clusteringAlgorithms.MatrixPartition;
+import linkSimilarity.clusteringAlgorithms.NodeHierarchicCluster;
 import semanticAttributesAggregation.SemanticMetricsManager;
-import webSimilarity.AdjacencyToWeight;
-import webSimilarity.CorrelationDegreeMatrix;
-import webSimilarity.CorrelationToSimilarityMatrix;
-import webSimilarity.adjacencyMatrixProcessing.AdjacencyMatrixProcessor;
-import webSimilarity.clusteringAlgorithms.MatrixOverlappingPartition;
-import webSimilarity.clusteringAlgorithms.MatrixPartition;
-import webSimilarity.clusteringAlgorithms.NodeHierarchicCluster;
 
 
 public class GraphsSimilarityEvaluator {

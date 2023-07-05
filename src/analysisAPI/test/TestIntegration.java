@@ -7,7 +7,8 @@ import org.junit.jupiter.api.Test;
 import analysisAPI.GraphsSimilarityEvaluator;
 import graphSimilarities.GraphsVertexSimilarities;
 import graphSimilarities.MaximizedHungarianMethodWrapper;
-import webSimilarity.clusteringAlgorithms.NodeHierarchicCluster;
+import linkSimilarity.clusteringAlgorithms.NodeHierarchicCluster;
+
 
 class TestIntegration {
 

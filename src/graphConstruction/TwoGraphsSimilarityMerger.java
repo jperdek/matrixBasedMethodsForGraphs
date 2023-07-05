@@ -97,7 +97,7 @@ public class TwoGraphsSimilarityMerger extends GraphCreator {
 		for (Map.Entry<String,Set<String>> mergedEntry : merged.entrySet()) {
 			mergedRecords = mergedEntry.getValue();
 			recordName = mergedEntry.getKey();
-			this.insertClusterCenterIfNotExists(recordName, 
+			//this.insertClusterCenterIfNotExists(recordName, 
 		}
 		
 	}

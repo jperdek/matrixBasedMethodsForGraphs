@@ -8,10 +8,11 @@ import java.util.Map;
 import org.neo4j.driver.Result;
 import org.neo4j.driver.Session;
 
-import graphConstruction.scoringEvaluation.PageRank;
+//import graphConstruction.scoringEvaluation.PageRank;
+import linkSimilarity.adjacencyMatrixProcessing.AdjacencyMatrixProcessor;
+import main.MainConfiguration;
 import semanticAttributesAggregation.JackardSimilarity;
 import semanticAttributesAggregation.SemanticMetricsManager;
-import webSimilarity.adjacencyMatrixProcessing.AdjacencyMatrixProcessor;
 import static org.neo4j.driver.Values.parameters;
 import org.neo4j.driver.Record;
 
@@ -69,7 +70,8 @@ public class GraphToMatrixProcessor extends GraphCreator {
 	
 	public static void main(String args[]) {
 
-		try (GraphToMatrixProcessor graphToMatrixProcessor = new GraphToMatrixProcessor("bolt://localhost:7687", "neo4j", "feature")) {
+		try (GraphToMatrixProcessor graphToMatrixProcessor = new GraphToMatrixProcessor(
+				MainConfiguration.NEO4J_DB_BOLT_CONNECTION, MainConfiguration.NEO4J_DB_NAME, MainConfiguration.NEO4J_DB_PASSWORD)) {
 			// GraphToMatrixProcessor.processUntaggedGraph(graphToMatrixProcessor);
 			GraphToMatrixProcessor.processGraph(graphToMatrixProcessor, AppliedGraphNames.PUZZLE_TO_PLAY);
 			GraphToMatrixProcessor.processGraph(graphToMatrixProcessor, AppliedGraphNames.DESIGN_3D);

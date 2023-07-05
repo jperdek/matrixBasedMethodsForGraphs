@@ -2,11 +2,11 @@ package semanticAttributesAggregation;
 
 import java.util.Map;
 
-public class JackardSimilarity extends SemanticMetricsSimilarity {
+public class JaccardSimilarity extends SemanticMetricsSimilarity {
 	
 	private Map<String, Double> variableMapping;
 	
-	public JackardSimilarity(String semanticVariableName, double coefficient, Map<String, Double> variableMapping) {
+	public JaccardSimilarity(String semanticVariableName, double coefficient, Map<String, Double> variableMapping) {
 		super(semanticVariableName, coefficient);
 		this.variableMapping = variableMapping;
 	}

@@ -6,6 +6,7 @@ import java.util.Map;
 import org.neo4j.driver.Result;
 import org.neo4j.driver.Session;
 import functionalityNodes.ModuleNode;
+import main.MainConfiguration;
 import parser.FeatureParser;
 import semanticAttributesAggregation.AttributeSetAggregator;
 import semanticAttributesAggregation.TemplateSemanticManager;
@@ -22,43 +23,43 @@ public class InsertSemanticRelations extends GraphCreator {
 	
 	private static void processPuzzleToPlay() {
 		FeatureParser featureParser = new FeatureParser();
-		ModuleNode rootModule = featureParser.parse("D:\\aspects\\puzzle\\src\\app\\app.module.ts", 
-				"D:\\aspects\\puzzle\\src\\app\\app.module.ts");
-		try (InsertSemanticRelations featureDataInsertion = new InsertSemanticRelations("bolt://localhost:7687", "neo4j", "feature")) {
+		ModuleNode rootModule = featureParser.parse(MainConfiguration.APP1_PUZZLE_TO_PLAY_MAIN_MODULE_PATH, 
+				MainConfiguration.APP1_PUZZLE_TO_PLAY_MAIN_MODULE_PATH);
+		try (InsertSemanticRelations featureDataInsertion = new InsertSemanticRelations(
+				MainConfiguration.NEO4J_DB_BOLT_CONNECTION, MainConfiguration.NEO4J_DB_NAME, MainConfiguration.NEO4J_DB_PASSWORD)) {
 			featureDataInsertion.createGraph(rootModule, AppliedGraphNames.PUZZLE_TO_PLAY);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
 	private static void processDesign3D() {
 		FeatureParser featureParser = new FeatureParser();
-		ModuleNode rootModule = featureParser.parse("D:\\aspects\\design3D\\design3D\\src\\app\\app.module.ts", 
-				"D:\\aspects\\design3D\\design3D\\src\\app\\app.module.ts");
-		try (InsertSemanticRelations featureDataInsertion = new InsertSemanticRelations("bolt://localhost:7687", "neo4j", "feature")) {
+		ModuleNode rootModule = featureParser.parse(MainConfiguration.APP2_DESIGN_3D_MAIN_MODULE_PATH, 
+				MainConfiguration.APP2_DESIGN_3D_MAIN_MODULE_PATH);
+		try (InsertSemanticRelations featureDataInsertion = new InsertSemanticRelations(
+				MainConfiguration.NEO4J_DB_BOLT_CONNECTION, MainConfiguration.NEO4J_DB_NAME, MainConfiguration.NEO4J_DB_PASSWORD)) {
 			featureDataInsertion.createGraph(rootModule, AppliedGraphNames.DESIGN_3D);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
 	private static void processUntaggedGraph() {
 		FeatureParser featureParser = new FeatureParser();
-		ModuleNode rootModule = featureParser.parse("D:\\aspects\\puzzle\\src\\app\\app.module.ts", 
-				"D:\\aspects\\puzzle\\src\\app\\app.module.ts");
-		try (InsertSemanticRelations featureDataInsertion = new InsertSemanticRelations("bolt://localhost:7687", "neo4j", "feature")) {
+		ModuleNode rootModule = featureParser.parse(MainConfiguration.APP1_PUZZLE_TO_PLAY_MAIN_MODULE_PATH, 
+				MainConfiguration.APP1_PUZZLE_TO_PLAY_MAIN_MODULE_PATH);
+		try (InsertSemanticRelations featureDataInsertion = new InsertSemanticRelations(
+				MainConfiguration.NEO4J_DB_BOLT_CONNECTION, MainConfiguration.NEO4J_DB_NAME, MainConfiguration.NEO4J_DB_PASSWORD)) {
 			featureDataInsertion.createGraph(rootModule, null);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 	
 	public static void main(String args[]) {
 		InsertSemanticRelations.processPuzzleToPlay();
-		InsertSemanticRelations.processDesign3D();
+		//InsertSemanticRelations.processDesign3D();
 	}
 
 	public void createGraph(ModuleNode rootNode, String tag)

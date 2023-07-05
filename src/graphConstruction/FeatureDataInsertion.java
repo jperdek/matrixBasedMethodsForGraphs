@@ -14,6 +14,7 @@ import functionalityNodes.ExternalNode;
 import functionalityNodes.FunctionalNode;
 import functionalityNodes.ModuleNode;
 import functionalityNodes.ServiceNode;
+import main.MainConfiguration;
 import parser.FeatureParser;
 
 
@@ -30,24 +31,24 @@ public class FeatureDataInsertion extends GraphCreator {
 
 	private static void insertPuzzleToPlay() {
 		FeatureParser featureParser = new FeatureParser();
-		ModuleNode rootModule = featureParser.parse("D:\\aspects\\puzzle\\src\\app\\app.module.ts", 
-				"D:\\aspects\\puzzle\\src\\app\\app.module.ts");
-		try (FeatureDataInsertion featureDataInsertion = new FeatureDataInsertion("bolt://localhost:7687", "neo4j", "feature")) {
+		ModuleNode rootModule = featureParser.parse(MainConfiguration.APP1_PUZZLE_TO_PLAY_MAIN_MODULE_PATH, 
+				MainConfiguration.APP1_PUZZLE_TO_PLAY_MAIN_MODULE_PATH);
+		try (FeatureDataInsertion featureDataInsertion = new FeatureDataInsertion(
+				MainConfiguration.NEO4J_DB_BOLT_CONNECTION, MainConfiguration.NEO4J_DB_NAME, MainConfiguration.NEO4J_DB_PASSWORD)) {
 			featureDataInsertion.createGraph(rootModule, AppliedGraphNames.PUZZLE_TO_PLAY);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 	
 	private static void insertDesign3D() {
 		FeatureParser featureParser = new FeatureParser();
-		ModuleNode rootModule = featureParser.parse("D:\\aspects\\design3D\\design3D\\src\\app\\app.module.ts", 
-				"D:\\aspects\\design3D\\design3D\\src\\app\\app.module.ts");
-		try (FeatureDataInsertion featureDataInsertion = new FeatureDataInsertion("bolt://localhost:7687", "neo4j", "feature")) {
+		ModuleNode rootModule = featureParser.parse(MainConfiguration.APP2_DESIGN_3D_MAIN_MODULE_PATH, 
+				MainConfiguration.APP2_DESIGN_3D_MAIN_MODULE_PATH);
+		try (FeatureDataInsertion featureDataInsertion = new FeatureDataInsertion(
+				MainConfiguration.NEO4J_DB_BOLT_CONNECTION, MainConfiguration.NEO4J_DB_NAME, MainConfiguration.NEO4J_DB_PASSWORD)) {
 			featureDataInsertion.createGraph(rootModule, AppliedGraphNames.DESIGN_3D);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

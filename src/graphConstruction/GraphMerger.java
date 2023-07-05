@@ -1,19 +1,16 @@
 package graphConstruction;
 
-
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-
-import analysisAPI.GraphsSimilarityEvaluator;
 import analysisAPI.integration.MatricesMerger;
 import graphSimilarities.GraphsVertexSimilaritiesLong;
 import graphSimilarities.MaximizedHungarianMethodWrapper;
-import webSimilarity.clusteringAlgorithms.NodeHierarchicCluster;
+import main.MainConfiguration;
 
 
 public class GraphMerger {
 
 	public static void main(String args[]) {
-		try (GraphToMatrixProcessor graphToMatrixProcessor = new GraphToMatrixProcessor("bolt://localhost:7687", "neo4j", "feature")) {
+		try (GraphToMatrixProcessor graphToMatrixProcessor = new GraphToMatrixProcessor(
+				MainConfiguration.NEO4J_DB_BOLT_CONNECTION, MainConfiguration.NEO4J_DB_NAME, MainConfiguration.NEO4J_DB_PASSWORD)) {
 			GraphMerger.mergeGraphs(graphToMatrixProcessor, AppliedGraphNames.PUZZLE_TO_PLAY, AppliedGraphNames.DESIGN_3D);
 		} catch (Exception e) {
 			e.printStackTrace();

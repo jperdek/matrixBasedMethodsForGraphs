@@ -3,7 +3,8 @@ package graphConstruction;
 import org.neo4j.driver.Session;
 
 import analysisAPI.GraphsSimilarityEvaluator;
-import webSimilarity.clusteringAlgorithms.NodeHierarchicCluster;
+import linkSimilarity.clusteringAlgorithms.NodeHierarchicCluster;
+import main.MainConfiguration;
 
 
 public class GraphsClustering {
@@ -12,7 +13,8 @@ public class GraphsClustering {
 		NodeHierarchicCluster nodeHierarchicCluster;
 		NodeHierarchicCluster nodeHierarchicClusterExtended;
 		
-		try (GraphToMatrixProcessor graphToMatrixProcessor = new GraphToMatrixProcessor("bolt://localhost:7687", "neo4j", "feature")) {
+		try (GraphToMatrixProcessor graphToMatrixProcessor = new GraphToMatrixProcessor(
+				MainConfiguration.NEO4J_DB_BOLT_CONNECTION, MainConfiguration.NEO4J_DB_NAME, MainConfiguration.NEO4J_DB_PASSWORD)) {
 			nodeHierarchicCluster = GraphsClustering.mergeGraphs(graphToMatrixProcessor, AppliedGraphNames.PUZZLE_TO_PLAY, AppliedGraphNames.DESIGN_3D);
 			nodeHierarchicClusterExtended =  GraphsClustering.mergeGraphsExtended(graphToMatrixProcessor, AppliedGraphNames.PUZZLE_TO_PLAY, AppliedGraphNames.DESIGN_3D);
 		} catch (Exception e) {
@@ -20,7 +22,8 @@ public class GraphsClustering {
 			return;
 		}
 		
-		try (GraphHierarchicClustering graphHierarchicClusteringProcessor = new GraphHierarchicClustering("bolt://localhost:7687", "neo4j", "feature")) {
+		try (GraphHierarchicClustering graphHierarchicClusteringProcessor = new GraphHierarchicClustering(
+				MainConfiguration.NEO4J_DB_BOLT_CONNECTION, MainConfiguration.NEO4J_DB_NAME, MainConfiguration.NEO4J_DB_PASSWORD)) {
 			try ( Session session = graphHierarchicClusteringProcessor.driver.session() ) {
 				graphHierarchicClusteringProcessor.clearClusters(session, AppliedGraphNames.CLUSTERS_PUZZLE_DESIGN_MERGED);
 				graphHierarchicClusteringProcessor.clearClusters(session, AppliedGraphNames.CLUSTERS_PUZZLE_DESIGN_MERGED_EXTENDED);
@@ -63,6 +66,5 @@ public class GraphsClustering {
 				adjacencyMatrixGraph1, adjacencyMatrixGraph2, graph1Names, graph2Names);
 		// clusteredResult.printHierarchyWithNames(0);
 		return clusteredResult;
-		//clusteredResult.insertClusters(graphToMatrixProcessor, 0);
 	}
 }

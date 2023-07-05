@@ -4,6 +4,7 @@ import functionalityNodes.FunctionalNode;
 import functionalityNodes.ModuleNode;
 import functionalityNodes.NodeAggregator;
 import functionalityNodes.SelectorAggregator;
+import main.MainConfiguration;
 import semanticAttributesAggregation.TemplateSemanticManager;
 
 
@@ -33,8 +34,8 @@ public class FeatureParser {
 	
 	public static void main(String args[]) {
 		FeatureParser featureParser = new FeatureParser();
-		ModuleNode rootModule = featureParser.parse("D:\\aspects\\puzzle\\src\\app\\app.module.ts", 
-				"D:\\aspects\\puzzle\\src\\app\\app.module.ts");
+		ModuleNode rootModule = featureParser.parse(MainConfiguration.APP1_PUZZLE_TO_PLAY_MAIN_MODULE_PATH, 
+				MainConfiguration.APP1_PUZZLE_TO_PLAY_MAIN_MODULE_PATH);
 		TemplateSemanticManager templateSemanticManager = new TemplateSemanticManager();
 		templateSemanticManager.processComponents(rootModule);
 		
