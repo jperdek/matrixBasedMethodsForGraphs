@@ -24,12 +24,13 @@ JAVASCRIPT OBJECT REPRESENTATION HANDLING OBJECTS - Folder: javascriptObjectRepr
 
 Launching the application: 
 - loading external jars from lib folder  
-- setting paths to Angular projects (works with Puzzle To Play application) and DB setting in MainConfiguration.java in main package:
+- setting paths to Angular projects (works with Puzzle To Play application available in https://github.com/jperdek/puzzleToPlay) and DB setting in MainConfiguration.java in main package:
+  (NOTE: second application is not publicly available, but i can give access to it for testing purposes (parser is simple and may fail if parsing conditions are not met - parsing AST is for future work)- still methods are covered with unit tests) 
   ![Integration](./documentation/helpers/configuration.png)
 - install and launch neo4j db (tip for Windows: "E:\neo4j\bin\neo4j.bat" console) and open GUI (http://localhost:7474/browser/)
   ![Integration](./documentation/helpers/neo4jConsole.png)
 
-### Lauch whole process
+### Lauch whole process (both apps are required)
 - 1. launching FeatureDataInsertion.java in graphConstruction package:   
   ![both apps insertion](./documentation/helpers/parseBothApplications.png)
 	- result should be following:  
@@ -43,11 +44,12 @@ Launching the application:
 
 ![whole application as graph](./documentation/helpers/overviewOfPuzzleToPlayApplication.png)
 
-### Observe similarities between given components
+### Observe similarities between given components (only one of applications is required: Puzzle to Play is default)
 - launching FeatureParser.java in parser package  
+![Integration](./documentation/semanticEvaluationFlowExtendedVertical.png)
 
 ### Whole schema
-![Integration](./documentation/semanticEvaluationFlowExtendedVertical.png)
+![Whole schema of integrated approach](./documentation/semanticEvaluationFlowExtendedVertical.png)
 
 
 ## Original methods
